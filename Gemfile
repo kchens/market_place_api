@@ -17,6 +17,8 @@ gem 'jquery-rails'
 
 gem 'active_model_serializers'
 
+
+
 group :doc do
   gem 'sdoc', require: false
 end
@@ -33,3 +35,9 @@ group :test do
 end
 
 gem 'devise'
+
+gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
+gem 'compass-rails'
+gem 'furatto'
+gem 'font-awesome-rails'
+gem 'simple_form'
