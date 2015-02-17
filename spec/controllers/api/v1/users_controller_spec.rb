@@ -76,7 +76,7 @@ describe Api::V1::UsersController do
       before(:each) do
         @user = FactoryGirl.create :user
         patch :update, { id: @user.id,
-                         user: { email: "bademail@example.com" } }, format: :json
+                         user: { email: "bademail.com" } }, format: :json
       end
 
       it "renders an errors json" do
@@ -84,12 +84,22 @@ describe Api::V1::UsersController do
         expect(user_response).to have_key(:errors)
       end
 
-      it "renders the json errors on why the user couldn't be created" do
+      it "renders the json errors on whye the user could not be created" do
         user_response = JSON.parse(response.body, symbolize_names: true)
         expect(user_response[:errors][:email]).to include "is invalid"
       end
 
       it { should respond_with 422 }
     end
+  end
+
+  describe "DELETE #destroy" do
+    before(:each) do
+      @user = FactoryGirl.create :user
+      delete :destroy, { id: @user.id }, format: :json
+    end
+
+    it { should respond_with 204 }
+
   end
 end
