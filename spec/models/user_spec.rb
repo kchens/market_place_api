@@ -19,6 +19,9 @@ describe User do
   it { should respond_to(:auth_token) }
   it { should validate_uniqueness_of(:auth_token) }
 
+  it { should have_many(:products) }
+  it { should have_many(:orders) }
+
   describe "#generate_authentication_token!" do
     it "generates a unique token" do
       # stub is deprecated, see line below
@@ -37,7 +40,6 @@ describe User do
   end
 
 
-  it { should have_many(:products) }
   describe "#products association" do
 
     before do
