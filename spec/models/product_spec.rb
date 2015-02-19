@@ -88,7 +88,7 @@ describe Product do
       @product1 = FactoryGirl.create :product, price: 100, title: "Plasma tv"
       @product2 = FactoryGirl.create :product, price: 50, title: "Videogame console"
       @product3 = FactoryGirl.create :product, price: 150, title: "MP3"
-      @product4 = FactoryGirl.create :product, price: 99, title: "Laptop"
+      @product4 = FactoryGirl.create :product, price: 99, title: "tv Laptop"
     end
 
     context "when title 'videogame' and '100' a min price are set" do
