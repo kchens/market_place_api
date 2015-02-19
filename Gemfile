@@ -15,7 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-gem 'active_model_serializers'
+gem 'active_model_serializers', '~> 0.8.1'
 
 
 
